@@ -1,0 +1,137 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter';
+  line-height: 1.5;
+  background-image: url(../images/pattern-curve.svg), url(../images/pattern-quotes.svg), url(../images/pattern-bg.svg);
+  background-size: 25%, 12%, 54%;
+  background-position: 0px 100%, 27% 34%, 100% 50%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+/* container */
+.container {
+  width: 900px;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: calc(50% + 50px);
+  z-index: 100;
+  margin-right: -50px;
+}
+
+.left p:last-child {
+  color: hsl(240, 18%, 77%);
+  font-size: 13px;
+}
+
+p span {
+  color: black;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+/* Right */
+.right {
+  width: 50%;
+  position: relative;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  box-shadow: 3px 6px 20px 2px hsl(240, 18%, 77%);
+}
+
+.buttons {
+  position: absolute;
+  display: flex;
+  border-radius: 25px;
+  background-color: white;
+  gap: 10px;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 30px;
+  width: fit-content;
+  box-shadow: 3px 6px 20px 2px hsl(240, 18%, 77%);
+}
+
+button {
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.buttons button:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+button:disabled {
+  color: hsl(240, 18%, 77%);
+  pointer-events: none;
+}
+
+@media (max-width:950px) {
+  body {
+    background-size: 25%, 12%, 46%;
+    background-position: 0px 100%, 50% 74%, 100% 17%;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .image {
+    width: 75%;
+    height: 75%;
+  }
+
+  .left {
+    margin: 0;
+    width: 100%;
+    order: 2;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .right {
+    width: 75%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
