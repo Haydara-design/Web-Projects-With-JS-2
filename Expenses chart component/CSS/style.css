@@ -1,0 +1,320 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'DM Sans';
+  background-color: hsl(26, 66%, 93%);
+}
+
+/* Animations */
+.fade {
+  animation: fadding 0.5s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.appear {
+  animation: appearing 0.5s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.appear-down {
+  animation: forwards appearDown 0.5s;
+}
+
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+.fade-up {
+  animation: forwards fadeUp 0.5s;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 500px;
+  flex-shrink: 0;
+}
+
+/* Header */
+header {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(10, 79%, 65%);
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.text h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.text p {
+  margin: 0 0 10px;
+}
+
+header .logo {
+  width: 55px;
+  height: 55px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Down */
+.shared-before::before {
+  width: 100%;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+  left: 50%;
+  top: -45px;
+  transform: translate(-50%, 0);
+}
+
+.down {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+
+.down .flex {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  border-bottom: 2px solid hsl(26, 66%, 93%);
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+
+.flex .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.flex .col div {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  animation: height 3s;
+}
+
+@keyframes height {
+  0% {
+    max-height: 0%;
+  }
+
+  100% {
+    max-height: 125px;
+  }
+}
+
+.flex .col div:hover {
+  background-color: hsl(10, 79%, 65%, 0.6);
+}
+
+.flex .col p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.mon {
+  height: 40px;
+}
+
+.mon::before {
+  content: '$20';
+}
+
+.mon:hover::before {
+  opacity: 1;
+}
+
+.tue {
+  height: 85px;
+}
+
+.tue::before {
+  content: '$42.5';
+}
+
+.tue:hover::before {
+  opacity: 1;
+}
+
+.flex .col .wed {
+  height: 125px;
+  background-color: hsl(186, 34%, 65%);
+}
+
+.wed::before {
+  content: '$62.5';
+}
+
+.flex .col .wed:hover {
+  background-color: hsl(186, 34%, 65%, 0.6);
+}
+
+.wed:hover::before {
+  opacity: 1;
+}
+
+.thu {
+  height: 70px;
+}
+
+.thu::before {
+  content: '$35';
+}
+
+.thu:hover::before {
+  opacity: 1;
+}
+
+.fri {
+  height: 55px;
+}
+
+.fri::before {
+  content: '$27.5';
+}
+
+.fri:hover::before {
+  opacity: 1;
+}
+
+.sat {
+  height: 100px;
+}
+
+.sat::before {
+  content: '$50';
+}
+
+.sat:hover::before {
+  opacity: 1;
+}
+
+.sun {
+  height: 60px;
+}
+
+.sun::before {
+  content: '$30';
+}
+
+.sun:hover::before {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+.s1 {
+  color: hsl(28, 10%, 53%);
+}
+
+footer h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.text-right p:first-child {
+  font-weight: 900;
+  text-align: end;
+}
+
+.text-right p:last-child {
+  margin-bottom: 5px;
+}
+
+@media (max-width:530px) {
+  .container {
+    width: 95%;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  footer h1 {
+    font-size: 28px;
+  }
+
+}
+
+@media (max-width:420px) {
+  .shared-before::before {
+    font-size: 12px;
+    top: -40px;
+  }
+}

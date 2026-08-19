@@ -1,0 +1,224 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins';
+  line-height: 1.5;
+  background-color: hsl(0, 0%, 86%);
+}
+
+/* Animations */
+.fade {
+  animation: fadding 0.5s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.appear {
+  animation: appearing 0.5s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.appear-down {
+  animation: forwards appearDown 0.5s;
+}
+
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+.fade-up {
+  animation: forwards fadeUp 0.5s;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+}
+
+/* Center */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5px;
+  width: 100%;
+}
+
+/* End Of Center */
+.container {
+  background-color: white;
+  padding: 40px;
+  width: 700px;
+  border-radius: 15px;
+  border-bottom-right-radius: 150px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 19.285%);
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputs input {
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border: 2px solid hsl(0, 0%, 86%);
+  font-weight: bolder;
+  font-size: 22px;
+  display: block;
+  transition: 0.4s;
+}
+
+.inputs label {
+  width: fit-content;
+  font-weight: bolder;
+  color: hsl(0, 1%, 44%);
+  transition: 0.4s;
+}
+
+.sp-btn {
+  display: flex;
+  align-items: center;
+}
+
+.sp-btn span {
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: hsl(0, 0%, 86%);
+}
+
+.sp-btn button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+button:hover {
+  background-color: hsl(259, 99%, 59%);
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: hsl(259, 100%, 65%);
+  transform: scale(1);
+}
+
+.sp-btn button img {
+  width: 80%;
+  height: 80%;
+}
+
+.data {
+  font-size: 48px;
+}
+
+.data span {
+  color: hsl(259, 100%, 65%);
+}
+
+.data h1 {
+  margin: 0px;
+  line-height: 1;
+}
+
+/* For Js */
+.error {
+  margin: 0px;
+  padding: 0px;
+  color: hsl(0, 100%, 67%);
+  font-size: 12px;
+}
+
+.inp-error {
+  border-color: hsl(0, 100%, 67%) !important;
+  outline-color: hsl(0, 100%, 67%) !important;
+}
+
+
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .data {
+    font-size: 40px;
+  }
+
+  .inputs input {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .data {
+    font-size: 32px;
+  }
+
+  .inputs input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .sp-btn button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 430px) {
+  .data {
+    font-size: 24px;
+  }
+}

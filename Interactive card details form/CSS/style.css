@@ -1,0 +1,299 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Space Grotesk';
+}
+
+/* Animations */
+.fade {
+  animation: fadding 0.5s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.appear {
+  animation: appearing 0.5s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.appear-down {
+  animation: forwards appearDown 0.5s;
+}
+
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+.fade-up {
+  animation: forwards fadeUp 0.5s;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+/* Left */
+.container .left {
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  padding: 20px;
+  width: 325px;
+  background-image: url(../images/bg-card-front.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 200px;
+  left: 150px;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card .s1 {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.card .s2 {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px hsl(270, 3%, 87%) solid;
+  width: 18px;
+  height: 18px;
+}
+
+.text {
+  color: white;
+}
+
+.text p:first-of-type {
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.text p:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.image {
+  width: 325px;
+  position: absolute;
+  top: 400px;
+  left: 225px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.num-cvv {
+  position: absolute;
+  top: 62px;
+  right: 37px;
+  color: white;
+}
+
+/* Right */
+.container .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid hsl(270, 3%, 87%);
+  margin-bottom: 20px;
+  width: 100%;
+  outline-color: hsl(278, 94%, 30%);
+}
+
+/* Info */
+form {
+  width: 350px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  column-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.info input {
+  display: inline;
+  margin-bottom: 0px;
+}
+
+.info .month-year {
+  width: 175px;
+}
+
+.month-year input {
+  width: 44%;
+  padding-right: 0px;
+}
+
+.month-year input:first-of-type {
+  margin-right: 10px;
+}
+
+.info .cvc {
+  width: 100%;
+}
+
+.cvc input {
+  width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(278, 68%, 11%, 0.6);
+}
+
+button:active {
+  background-color: hsl(278, 68%, 11%);
+  transform: translateY(10px);
+}
+/* For JS */
+.error{
+  padding: 0;
+  margin: 5px 0px 20px;
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+}
+
+@media (max-width:1200px) {
+  .card {
+    top: 200px;
+    left: 100px;
+  }
+
+  .image {
+    top: 400px;
+    left: 150px;
+  }
+}
+
+@media (max-width:1100px) {
+  .card {
+    top: 200px;
+    left: 50px;
+  }
+
+  .image {
+    top: 400px;
+    left: 100px;
+  }
+}
+
+@media (max-width:1000px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .right {
+    width: 100%;
+    margin-top: 75px;
+  }
+
+  .container .left {
+    background-image: url(../images/bg-main-mobile.png);
+    width: 100%;
+    height: 40vh;
+  }
+
+  .card {
+    top: 150px;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-60%, 0);
+  }
+
+  .image {
+    top: 30px;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-45%, 0);
+  }
+
+}
