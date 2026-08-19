@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="container">
+
+            <div class="left">
+                <header>
+                    <h3>Mortgage Calculator</h3>
+                    <button>clear all</button>
+                </header>
+
+                <form action="">
+                    <label for="Mortgage-amount">Mortgage amount</label>
+                    <div class="Mortgage-amount">
+                        <span>£</span>
+                        <input type="text" inputmode="numeric" pattern="[0-9.,]*" id="Mortgage-amount">
+                    </div>
+
+                    <div class="mid">
+                        <div class="t">
+                            <label for="Mortgage-term">Mortgage Term</label>
+                            <div class="Mortgage-term">
+                                <input inputmode="numeric" pattern="[0-9]*" type="text" id="Mortgage-term">
+                                <span>years</span>
+                            </div>
+                        </div>
+                        <div class="t">
+                            <label for="Intrest-rate">Intrest Rate</label>
+                            <div class="Mortgage-term">
+                                <input inputmode="" pattern="[0-9.]*" type="text" id="Intrest-rate">
+                                <span>%</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p>Mortgage Type</p>
+
+                    <div class="radio">
+                        <input type="radio" value="Re" name="os" id="Repayment">
+                        <label for="Repayment">Repayment</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" value="In" name="os" id="Interse">
+                        <label for="Interse">Interset Only</label>
+                    </div>
+
+                    <button type="submit"><i class="fa-solid fa-calculator"></i>Calculate Repayments</button>
+                </form>
+            </div>
+            <div class="right">
+                <div class="image">
+                    <img src="images/illustration-empty.svg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Results shown here</h2>
+                    <p>Complete the form and click on "Calculate Repayments" and see your mounthly repayment would be
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

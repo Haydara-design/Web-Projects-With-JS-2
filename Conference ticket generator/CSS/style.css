@@ -1,0 +1,367 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inconsolata', sans-serif;
+  line-height: 1.5;
+  background-image: url(../images/background-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+  margin: 20px 0px 50px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Of Header */
+/* Container */
+.container {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  color: white;
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+  color: hsl(252, 6%, 83%);
+}
+
+/* End Of Container */
+
+/* Form */
+form {
+  position: relative;
+}
+.size{
+  transition: 0.3s;
+}
+input {
+  display: block;
+  width: 100%;
+  background-color: rgb(52, 48, 83, 0.3);
+  border: 2px solid hsl(245, 15%, 58%, 0.5);
+  padding: 15px 10px;
+  border-radius: 10px;
+  color: white;
+  outline-offset: 3px;
+  outline: solid 2px transparent;
+  transition: 0.3s;
+}
+
+[type="file"] {
+  height: 150px;
+  opacity: 0;
+  z-index: -1;
+}
+
+label {
+  margin-top: 20px;
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+
+.special {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(52, 48, 83, 0.3);
+  border: 2px dashed hsl(245, 15%, 58%, 0.5);
+  padding: 15px 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  outline-offset: 3px;
+  outline: solid 2px transparent;
+  z-index: 1;
+}
+
+.image {
+  background-color: hsl(246.86deg 26.72% 25.69%);
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border: 2px solid hsl(246.86deg 20.23% 33.92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image img {
+  width: 40px;
+  height: 40px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: hsl(7, 88%, 67%);
+  border: none;
+  outline: none;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+  cursor: pointer;
+  outline-offset: 3px;
+  outline: solid transparent 2px;
+  transition: 0.3s;
+}
+
+/* End Of Form */
+/* Effects */
+button:hover {
+  outline-color: hsl(245, 15%, 58%);
+  background: hsl(7, 71%, 60%);
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1);
+  background-color: hsl(7, 86%, 54%);
+}
+
+input:hover {
+  outline-color: hsl(245, 15%, 58%);
+}
+
+input:focus {
+  outline-color: hsl(245, 15%, 58%);
+}
+
+.special:hover {
+  outline-color: hsl(245, 15%, 58%);
+}
+
+/* For JS */
+.container2 {
+  height: 55vh;
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.container2 h1 {
+  color: white;
+  text-align: center;
+}
+
+.container2 p {
+  text-align: center;
+  color: hsl(252, 6%, 83%);
+}
+
+.s1 {
+  background: linear-gradient(to left, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.s2 {
+  color: hsl(7, 86%, 67%);
+}
+
+/* Ticket  */
+.ticker-container {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  width: 440px;
+  align-self: flex-start;
+  padding: 20px;
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1.1);
+  background-image: url(../images/pattern-ticket.svg);
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+
+/* Ticket Up */
+.up {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.text-ticket {
+  margin-left: 20px;
+}
+
+.up h1 {
+  color: white;
+  margin: 0px;
+  text-align: left;
+}
+
+.ticker-container p {
+  margin: 0;
+  text-align: left;
+}
+
+.image2 {
+  width: 40px;
+  height: 50px;
+}
+
+.image2 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ticket Down */
+.down {
+  display: flex;
+  width: 100%;
+}
+
+
+
+.image3 {
+  width: 55px;
+  height: 56px;
+  border-radius: 10px;
+}
+
+.down h2 {
+  margin: 0;
+  color: white;
+}
+
+.image3 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+
+}
+
+.num {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+
+}
+
+.num p {
+  font-size: 30px;
+}
+
+.error{
+  color:hsl(7, 71%, 60%) !important;
+  text-align:left !important;
+  font-size:12px;
+  margin:0px
+}
+.fade {
+  animation: fadding 0.4s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+  }
+}
+
+.appear {
+  animation: appearing 0.4s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container2 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 862px) {
+  body {
+    background-image: url(../images/background-tablet.png);
+  }
+
+  .container {
+    width: 70%;
+  }
+
+  .container2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(../images/background-mobile.png);
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .container2 {
+    width: 95%;
+  }
+
+  .ticker-container {
+    transform: scale(0.9) translate(-55%, 0);
+  }
+}
+
+@media (max-width: 420px) {
+  .ticker-container {
+    transform: scale(0.8) translate(-62%, 0);
+  }
+}
+
+@media (max-width: 374px) {
+  .ticker-container {
+    transform: scale(0.7) translate(-71.5%, 0);
+  }
+}

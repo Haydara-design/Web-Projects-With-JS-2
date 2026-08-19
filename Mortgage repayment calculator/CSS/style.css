@@ -1,0 +1,327 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans';
+  line-height: 1.5;
+  background-color: hsl(202, 86%, 94%);
+}
+
+input {
+  font-weight: 900;
+  color: hsl(202, 55%, 16%);
+  display: block;
+}
+
+span {
+  transition: 0.3s;
+}
+
+label+div {
+  transition: 0.3s;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  background-color: white;
+  display: flex;
+  width: 70%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* End Of Container */
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  text-decoration: underline;
+  color: hsl(200, 24%, 40%);
+  outline: none;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* End Of Header */
+
+/* Left */
+.container .left {
+  padding: 30px;
+  width: 50%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Mortgage-amount */
+.Mortgage-amount {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  border: 2px hsl(200, 26%, 54%) solid;
+  border-radius: 5px;
+  margin: 5px 0px 7px;
+}
+
+.Mortgage-amount span {
+  background-color: hsl(202, 86%, 94%);
+  color: hsl(200, 24%, 40%);
+  padding: 5px 10px;
+  font-weight: bolder;
+}
+
+.Mortgage-amount input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+label {
+  color: hsl(200, 24%, 40%);
+  cursor: pointer;
+}
+
+/* End Of Mortgage-amount */
+
+/* Mid */
+.mid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.t {
+  width: 45%;
+}
+
+.Mortgage-term {
+  margin: 5px 0px 7px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 2px hsl(200, 26%, 54%) solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.Mortgage-term span {
+  background-color: hsl(202, 86%, 94%);
+  color: hsl(200, 24%, 40%);
+  padding: 5px 10px;
+  font-weight: bolder;
+}
+
+.Mortgage-term input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  width: 90%;
+}
+
+.mid+p {
+  color: hsl(200, 24%, 40%);
+}
+
+/* End Of Mid */
+
+/* radio */
+.radio {
+  padding: 10px 20px;
+  border: 2px hsl(200, 26%, 54%) solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.radio:hover {
+  border-color: hsl(61, 70%, 52%) !important;
+}
+
+.radio label {
+  margin-left: 20px;
+  color: hsl(202, 55%, 16%);
+  font-weight: 600;
+  width: 100%;
+  position: relative;
+}
+
+.radio label::after {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  outline-offset: 3px;
+  outline: solid #7d7d7d 2px;
+  top: 0%;
+  left: 0;
+  transform: translate(-38px, 5px);
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.radio input {
+  width: 25px;
+  height: 20px;
+  opacity: 0;
+}
+
+.radio input:checked+label::after {
+  background-color: hsl(61, 70%, 52%);
+  outline-color: hsl(61, 70%, 52%);
+}
+
+/* End Of radio */
+form button {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  width: 75%;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form button:hover {
+  background-color: hsla(61, 70%, 52%, 0.6);
+}
+
+form button:active {
+  background-color: hsla(61, 70%, 52%);
+  transform: translateY(10px);
+}
+
+form button i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* End Of Left */
+
+.right {
+  width: 50%;
+  background-color: hsl(202, 55%, 16%);
+  text-align: center;
+  color: hsl(203, 41%, 72%);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 50px;
+  transition: 0.3s;
+}
+
+.right h2 {
+  color: white;
+}
+
+.error {
+  color: hsl(4, 69%, 50%);
+  margin: 0px;
+  font-size: 12px;
+}
+
+.s-container {
+  background-color: hsl(202, 55%, 16%);
+  padding: 25px;
+  text-align: left;
+  border-top: 3px solid hsl(61, 70%, 52%);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.s-container h1 {
+  color: hsl(61, 70%, 52%);
+  font-size: 48px;
+}
+
+.s-container hr {
+  background-color: hsl(200, 24%, 40%);
+}
+
+.final {
+  color: hsl(200, 26%, 54%);
+}
+
+.final span {
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+}
+
+.fade {
+  animation: fadding 0.3s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.appear {
+  animation: appearing 0.3s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 100%;
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0px;
+  }
+
+  .container .left {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .right {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
