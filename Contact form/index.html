@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form action="">
+
+                <div class="first-last">
+                    <div class="small-cont">
+                        <label for="FN">First Name <span>*</span></label>
+                        <input type="text" name="ID" id="FN">
+                    </div>
+
+                    <div class="small-cont">
+                        <label for="LN">Last Name <span>*</span></label>
+                        <input type="text" name="ID" id="LN">
+                    </div>
+                </div>
+
+                <label for="email">Email Address <span>*</span></label>
+                <input type="text" id="email">
+
+                <p>Query Type <span>*</span></p>
+                <div class="first-last test">
+                    <div class="small-cont2">
+                        <input type="radio" name="ID" id="GN">
+                        <label for="GN" class="chb">General Enquiry <span>*</span></label>
+                    </div>
+
+                    <div class="small-cont2">
+                        <input type="radio" name="ID" id="SR">
+                        <label for="SR" class="chb">Support Request <span>*</span></label>
+                    </div>
+                </div>
+
+                <div class="msg">
+                    <label for="msg">Message <span>*</span></label>
+                    <textarea name="" id="msg"></textarea>
+                </div>
+                
+                <div class="check">
+                    <input type="checkbox" id="CB">
+                    <label for="CB" class="chb">I consent to be contacted by the team <span>*</span></label>
+                </div>
+                
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

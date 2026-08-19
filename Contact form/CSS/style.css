@@ -1,0 +1,265 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Karla';
+  line-height: 1.5;
+  background-color: hsl(148, 38%, 91%);
+}
+
+span {
+  color: hsl(169, 82%, 27%);
+}
+
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid hsl(186, 15%, 59%);
+  display: block;
+}
+
+label:not(.chb) {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  width: 642.8px;
+  padding: 30px;
+}
+
+.first-last {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.small-cont {
+  width: 45%;
+}
+
+#email {
+  display: block;
+}
+
+.small-cont2 {
+  width: 45%;
+  border-radius: 10px;
+  border: 2px solid hsl(186, 15%, 59%);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.small-cont2 label {
+  position: relative;
+}
+
+.small-cont2 label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-35px, 5px);
+  outline: 2px solid hsl(186, 15%, 59%);
+  outline-offset: 4px;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.small-cont2 input:checked+label:hover::before {
+  background-color: hsl(169, 82%, 27%, 0.7);
+}
+
+.small-cont2 input:checked+label::before {
+  background-color: hsl(169, 82%, 27%);
+  outline-color: hsl(169, 82%, 27%);
+}
+
+[type="radio"] {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  opacity: 0;
+}
+
+.msg label {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid hsl(186, 15%, 59%);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-top:20px ;
+}
+
+label {
+  cursor: pointer;
+}
+
+[type="checkbox"] {
+  width: fit-content;
+  margin-right: 15px;
+  accent-color: hsl(169, 82%, 27%);
+}
+
+
+button {
+  color: white;
+  text-align: center;
+  background-color: hsl(169, 82%, 27%);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: hsl(187, 24%, 22%);
+}
+
+button:active {
+  background-color: hsl(169, 82%, 27%);
+  transform: translateY(10px);
+}
+
+/* For JS */
+.error {
+  color: hsl(0, 66%, 54%);
+  font-size: 12px;
+  margin: 5px 0px;
+}
+
+.pop-msg{
+  background-color: hsl(187, 24%, 22%);
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+}
+.pop-msg p:first-child{
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.pop-msg p:last-child{
+  color: hsl(186, 15%, 59%);
+}
+.pop-msg i {
+  color: white;
+  outline: 2px solid white;
+  outline-offset: 3px;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.fade {
+  animation: fadding 0.3s forwards;
+}
+
+@keyframes fadding {
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.appear {
+  animation: appearing 0.3s forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.appear-down{
+  animation: forwards appearDown 0.3s;
+}
+@keyframes appearDown {
+  0%{
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(-50%) translateY(30px);
+  }
+}
+.fade-up{
+  animation: forwards fadeUp 0.3s;
+}
+@keyframes fadeUp {
+  0%{
+    transform: translateX(-50%) translateY(30px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100px);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 570px) {
+  .first-last {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .small-cont,
+  .small-cont2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
