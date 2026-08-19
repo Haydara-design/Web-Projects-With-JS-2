@@ -1,0 +1,435 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Ubuntu';
+  line-height: 1.5;
+}
+
+/* aside */
+aside {
+  min-width: 350px;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  box-shadow: 2px 3px 20px 0 hsl(207, 13%, 34%, 0.5);
+  display: none;
+  opacity: 0;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+aside li {
+  cursor: pointer;
+  color: hsl(208, 49%, 24%);
+}
+
+aside li i {
+  color: hsl(356, 100%, 66%);
+  transition: 0.5s;
+}
+
+aside .same {
+  background-color: #eee;
+  color: hsl(208, 49%, 24%);
+  border-radius: 5px;
+  position: unset;
+  width: 100%;
+  opacity: 1;
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  box-shadow: unset;
+  padding: 0px;
+  transition: 0.3s;
+}
+
+aside .same p {
+  text-align: center;
+}
+
+aside .same p:first-child {
+  margin-top: 20px;
+}
+
+aside .same p:last-child {
+  margin-bottom: 20px;
+}
+
+aside .buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+aside .buttons button:last-child {
+  background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  color: white;
+}
+
+aside .buttons button:first-child {
+  color: hsl(208, 49%, 24%);
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat no-repeat;
+  background-size: 140% 300%, cover;
+  background-position: -4% 50%, 0 0;
+  border-bottom-left-radius: 75px;
+  padding: 50px 100px;
+}
+
+.up {
+  display: flex;
+  align-items: center;
+}
+
+.up ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.up ul li {
+  margin-left: 40px;
+  cursor: pointer;
+  color: #ffdeda;
+  transition: 0.3s;
+}
+
+.up li i {
+  transition: 0.5s;
+}
+
+.up ul li:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.up .buttons {
+  margin-left: auto;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+button:active {
+  transform: translateY(10px);
+}
+
+.buttons button:first-child {
+  background-color: transparent;
+  color: white;
+  width: fit-content;
+  margin-right: 20px;
+}
+
+.buttons button:last-child,
+.buttons2 button:first-child {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: white;
+  color: hsl(353, 100%, 62%);
+}
+
+.buttons button:last-child:hover,
+.buttons2 button:first-child:hover {
+  background-color: hsl(354.55deg 100% 74.12%);
+  color: white;
+}
+
+/* Shape */
+.shape {
+  display: none;
+  cursor: pointer;
+}
+
+.same {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 20px 0 hsl(207, 13%, 34%, 0.5);
+  position: absolute;
+  top: 100px;
+  color: black;
+  opacity: 0;
+  display: none;
+}
+
+.same p {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.same p:hover {
+  font-weight: 600;
+}
+
+.same p:last-child {
+  margin-bottom: 0;
+}
+
+.same p:first-child {
+  margin-top: 0;
+}
+
+.product {
+  left: 239px;
+}
+
+.company {
+  left: 354px;
+}
+
+.connect {
+  left: 478px;
+}
+
+/* Header Down */
+.down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+  text-align: center;
+  color: white;
+}
+
+.down .text1 {
+  margin-bottom: 30px;
+  font-family: 'Overpass';
+}
+
+.text1 h1 {
+  font-size: 48px;
+}
+
+.text1 p {
+  font-weight: 300;
+  color: #ffdeda;
+}
+
+.buttons2 {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons2 button:last-child {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  border: 2px white solid;
+}
+
+/* after-header */
+.after-header {
+  margin: 100px auto 0;
+  text-align: center;
+  font-family: 'Overpass';
+  color: hsl(208, 49%, 24%);
+}
+
+/* container */
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Overpass';
+
+}
+
+.padd-left {
+  margin-left: 100px;
+}
+
+
+.left1 {
+  width: 58%;
+}
+
+.text2 {
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 60px;
+}
+
+.text2 p {
+  font-weight: 300;
+}
+
+.right1 {
+  width: 100%;
+}
+
+.right1 img,
+.left1 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* sec container */
+.padd-left-right {
+  margin: 150px 0;
+  padding: 0 100px;
+  color: white;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  max-height: 450px;
+  background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 31%));
+  background-repeat: no-repeat, no-repeat;
+  background-size: 80%, cover;
+  background-position: -342px 78%, 0 0;
+  gap: 0px;
+}
+
+.padd-left-right .right1 {
+  width: 40%;
+}
+
+.padd-left-right .left1 {
+  width: 50%;
+}
+
+.text3 p {
+  font-weight: 300;
+  color: #bbb;
+}
+
+/* third container */
+.padd-right {
+  margin-right: 100px;
+  gap: 0;
+}
+
+.padd-right .right1 {
+  width: 60%;
+
+}
+
+.padd-right .left1 {
+  width: 100%;
+}
+
+/* footer */
+footer {
+  background-color: hsl(240, 10%, 16%);
+  display: flex;
+  justify-content: space-around;
+  margin: 100px 0 0;
+  padding: 50px 100px;
+  border-top-right-radius: 75px;
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+footer ul li {
+  color: #bbb;
+  cursor: pointer;
+}
+
+footer li:hover {
+  text-decoration: underline;
+}
+
+@media (max-width:950px) {
+  .up {
+    justify-content: space-between;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .up ul {
+    display: none;
+  }
+
+  .shape {
+    display: block;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 75px 0;
+    text-align: center;
+  }
+
+  .padd-left .left1 {
+    width: 90%;
+  }
+
+  .padd-left-right .right1 {
+    width: 90%;
+  }
+
+  .padd-left-right {
+    max-height: 1000px;
+  }
+}
+
+@media (max-width:675px) {
+  header {
+    padding: 20px;
+  }
+}
+
+@media (max-width:580px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer h4 {
+    margin: 20px 0;
+  }
+
+  .text1 h1 {
+    font-size: 32px;
+  }
+}

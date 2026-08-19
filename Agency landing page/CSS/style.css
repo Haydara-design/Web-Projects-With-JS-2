@@ -1,0 +1,408 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Fraunces';
+}
+
+/* over-layer */
+.over-layer {
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: none;
+  transition: 0.5s;
+}
+
+/* Aside */
+aside {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  background-color: hsl(0, 0%, 98%);
+  right: 0;
+  top: 0;
+  width: 45%;
+  min-width: 200px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+aside .x1 {
+  display: block;
+  font-size: 34px;
+  margin-left: auto;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside ul li {
+  color: hsl(232, 10%, 55%);
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 35px;
+  width: 145px;
+  text-align: center;
+}
+
+aside ul li:hover {
+  color: black;
+  background-color: hsl(51, 100%, 49%);
+}
+
+/* Header */
+header {
+  color: white;
+  min-height: 85vh;
+  background-image: url(../images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+}
+
+.up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 30px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  border-radius: 25px;
+  background-color: #6eceff;
+}
+
+header ul li:active {
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+}
+
+header h1 {
+  margin: 70px 0 0;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+}
+
+header h1+img {
+  position: absolute;
+  top: 43.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shape {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 35px;
+  cursor: pointer;
+  margin-left: auto;
+  display: none;
+}
+
+.shape span {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  display: block;
+}
+
+/* Grid Up */
+.grid-up {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  margin-bottom: 100px;
+}
+
+.grid-up img {
+  width: 100%;
+  height: 100%;
+}
+
+.special-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-text div {
+  min-height: 425px;
+  max-width: 75%;
+  line-height: 1.5;
+}
+
+.special-text h2 {
+  font-size: 52px;
+}
+
+.special-text p {
+  color: hsl(213, 9%, 39%);
+  font-weight: 600;
+}
+
+.special-text button {
+  font-weight: 900;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.s1 {
+  display: block;
+  border-radius: 10px;
+  height: 12px;
+  width: 130px;
+  margin-top: -11px;
+}
+
+.yellow {
+  background-color: hsl(51, 100%, 49%, 0.3);
+}
+
+.red {
+  background-color: hsl(7, 99%, 70%, 0.3);
+
+}
+
+.text {
+  text-align: center;
+  max-width: 350px;
+  margin: -195px auto 0;
+}
+
+.blue h2,
+.blue p {
+  color: hsl(198, 62%, 26%);
+}
+
+.green h2,
+.green p {
+  color: hsl(167, 40%, 24%);
+}
+
+/* client */
+.client {
+  margin: 250px 0 75px;
+  color: hsl(210, 4%, 67%);
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+/* grid Down */
+.grid-down {
+  display: grid;
+  width: 75%;
+  margin: auto;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  font-family: 'Barlow';
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.cont .image2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.text2-foot h4 {
+  margin: 0;
+  font-family: 'Fraunces';
+}
+
+.text2-foot p {
+  color: hsl(210, 4%, 67%);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Grid-img */
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin-top: 100px;
+}
+
+.cont-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+footer {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(166.76deg 44.16% 69.8%);
+  font-family: 'Barlow';
+  color: hsl(168.33deg 45% 31.37%);
+}
+
+footer h3 {
+  font-size: 30px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+footer ul li {
+  margin-left: 20px;
+}
+
+ul li:first-child {
+  margin-left: 0;
+}
+
+footer .icons {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width:1025px) {
+  .special-text div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .special-text h2 {
+    font-size: 32px;
+  }
+
+  .special-text p {
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+  }
+}
+
+@media (max-width:830px) {
+  .grid-images {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .shape {
+    display: flex;
+  }
+
+  header ul {
+    display: none;
+  }
+}
+
+@media (max-width:699.9px) {
+  .grid-up{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  .grid-up div:nth-child(1) {
+    order: 2;
+  }
+
+  .grid-up div:nth-child(2) {
+    order: 1;
+  }
+
+  .grid-up div:nth-child(3) {
+    order: 3;
+  }
+
+  .grid-up div:nth-child(4) {
+    order: 4;
+  }
+
+  .grid-up div:nth-child(5) {
+    order: 5;
+  }
+
+  .grid-up div:nth-child(6) {
+    order: 6;
+  }
+}
+
+
+@media (max-width:600px) {
+  aside {
+    left: 50%;
+    top: 12%;
+    min-width: 300px;
+    min-height: auto;
+    transform: translate(-50%, 0%);
+  }
+
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside .x1 {
+    margin-bottom: 10px;
+  }
+
+  header {
+    background-image: url(../images/mobile/image-header.jpg);
+  }
+
+  header h1+img {
+    top: 51%;
+  }
+}
