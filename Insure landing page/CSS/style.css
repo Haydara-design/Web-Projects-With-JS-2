@@ -1,0 +1,413 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.padd {
+  padding: 0 10%;
+}
+
+/* aside */
+aside {
+  background-color: hsl(270, 9%, 17%);
+  width: 75%;
+  min-height: 100vh;
+  color: white;
+  position: fixed;
+  top: 76px;
+  right: 0;
+  padding: 30px;
+  background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  display: none;
+}
+
+aside button {
+  color: white;
+  border-color: white;
+  background-color: hsl(270, 9%, 17%);
+  width: 100%;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header */
+header {
+  display: flex;
+  background-color: white;
+  padding: 20px 10% !important;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+header ul li {
+  color: hsl(216, 30%, 68%);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  color: hsl(256, 26%, 20%);
+}
+
+button {
+  border: 2px hsl(256, 26%, 20%) solid;
+  outline: none;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  min-width: 140px;
+  color: hsl(256, 26%, 20%);
+  transition: 0.4s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: hsl(256, 26%, 20%);
+  color: white;
+}
+
+button:active {
+  transform: translateY(10px);
+}
+
+.hum {
+  display: none;
+}
+
+/* up */
+.up {
+  background-image: url(../images/bg-pattern-intro-left-desktop.svg), url(../images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0px, 100% 0%;
+  background-color: hsl(256, 26%, 20%);
+  display: flex;
+  padding-top: 75px;
+  padding-bottom: 25px;
+  margin-top: 81.6px;
+  gap: 10px;
+}
+
+span {
+  background-color: white;
+  width: 150px;
+  display: block;
+  height: 1px;
+}
+
+.text {
+  width: 50%;
+}
+
+.image {
+  width: 50%;
+  margin-bottom: -100px;
+}
+
+.text h1 {
+  color: white;
+  font-size: clamp(75px, 5vw, 28px);
+}
+
+.text p {
+  color: white;
+  font-size: clamp(20px, 5vw, 14px);
+}
+
+.b1 {
+  color: white;
+  border-color: white;
+  background-color: hsl(256, 26%, 20%);
+}
+
+.b1:hover {
+  background-color: white;
+  color: hsl(256, 26%, 20%);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* middle */
+.middle {
+  padding-top: 150px;
+  background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0% -240px;
+}
+
+.middle h1 {
+  font-size: clamp(75px, 5vw, 28px);
+}
+
+.middle span {
+  background-color: hsl(256, 26%, 20%);
+}
+
+/* grid */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.col0 {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.col0 .image2 {
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+}
+
+.col0 h3 {
+  margin: 0;
+}
+
+.col0 p {
+  margin: 0;
+  color: hsl(273, 4%, 51%);
+}
+
+/* flex */
+.flex {
+  background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  display: flex;
+  align-items: center;
+  margin: 100px 10%;
+  padding: 40px;
+  background-color: hsl(256, 26%, 20%);
+}
+
+.button-cont,
+.text1 {
+  width: 50%;
+}
+
+.text1 h1 {
+  font-size: clamp(50px, 5vw, 28px);
+  color: white;
+  margin: 0;
+}
+
+.button-cont button {
+  display: block;
+  margin-left: auto;
+}
+
+/* footer */
+footer {
+  background-image: url(../images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0%;
+  background-color: hsl(0deg 0% 98.04%);
+  padding: 40px 10%;
+}
+
+.flex2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.icons i {
+  color: hsl(273, 4%, 51%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.icons i:hover {
+  color: hsl(270, 9%, 17%);
+}
+
+footer .grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  text-decoration: underline;
+}
+
+footer .grid {
+  margin-top: 30px;
+}
+
+footer h4 {
+  margin-bottom: 35px;
+  color: hsl(273, 4%, 51%);
+}
+
+@media (max-width:1025px) {
+  .up {
+    background-image: none;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .image {
+    width: 100%;
+    order: 1;
+    margin: 0;
+  }
+
+  .text {
+    background-image: url(../images/bg-pattern-intro-left-mobile.svg), url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: 0 0, 100% 100px;
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    order: 2;
+    text-align: center;
+    padding: 0 10% 25px;
+  }
+
+  .up span {
+    display: none;
+  }
+
+  h1 {
+    font-size: 42px !important;
+  }
+
+  .middle {
+    background-image: url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: 100% -141px;
+  }
+}
+
+@media (max-width:914px) {
+  .middle {
+    background-image: url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: 100% -159px;
+  }
+}
+
+@media (max-width:800px) {
+  .hum {
+    display: block;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .button-cont,
+  .text1 {
+    width: 100%;
+  }
+
+  .button-cont button {
+    margin: auto;
+  }
+}
+
+@media (max-width:650px) {
+  aside{
+    width: 100%;
+  }
+  .col0 {
+    text-align: center;
+    align-items: center;
+  }
+
+  .middle span {
+    margin: auto;
+  }
+
+  .middle h1 {
+    text-align: center;
+  }
+
+  .flex {
+    background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+  }
+
+  footer {
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+  }
+}
+
+@media (max-width:639px) {
+  .middle {
+    background-image: url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: 100% -230px;
+  }
+}
+
+@media (max-width:463.9px) {
+  .middle {
+    background-image: url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: 100% -258px;
+  }
+}
+
+@media (max-width:399px) {
+  .col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .middle {
+    background-image: none;
+    background-position: 100% -258px;
+  }
+}

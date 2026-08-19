@@ -1,0 +1,60 @@
+function add(arg, fadeFunc = 'fade', appearFunc = 'appear', style = 'block') {
+    arg.style.display = style
+    arg.classList.remove(fadeFunc)
+    arg.classList.add(appearFunc)
+}
+function remove(arg, fadeFunc = 'fade', appearFunc = 'appear') {
+    arg.classList.remove(appearFunc)
+    arg.classList.add(fadeFunc)
+    setTimeout(() => { arg.style.display = 'none' }, 500);
+}
+function errors(class_, innerText) {
+    let er = document.createElement('p')
+    er.classList.add(class_)
+    er.innerText = innerText
+    return er
+}
+function cr(ele, cla, inner, att) {
+    let r = document.createElement(ele)
+    r.innerHTML = inner
+    if (cla)
+        r.className = cla
+    if (att)
+        for (let [key, value] of Object.entries(att))
+            r.setAttribute(key, value)
+    return r
+}
+function creat(elements, classes, innerHTMLs, atteributes) {
+    let arr = []
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(document.createElement(elements[i]))
+        if (classes[i])
+            arr[i].className = classes[i]
+        if (innerHTMLs[i])
+            arr[i].innerHTML = innerHTMLs[i]
+        if (atteributes[i])
+            for (let [key, value] of Object.entries(atteributes[i]))
+                arr[i].setAttribute(key, value)
+    }
+    return arr
+}
+function appened(...lista) {
+    for (let k = 0; k < lista.length; k++)
+        for (let i = 0; i < lista[k][1].length; i++)
+            lista[k][0].appendChild(lista[k][1][i])
+    return lista[0][0]
+}
+say = console.log
+
+let prices = document.querySelectorAll('h1 span:not(.s1)')
+let check = document.querySelector('input')
+
+let newPrices = [199.99,249.99,399.99]
+let oldPrices = [19.99,24.99,39.99]
+
+check.onclick = function(){
+    if(check.checked)
+        prices.forEach((ele,ind)=>{ele.innerText = newPrices[ind]})
+    else
+        prices.forEach((ele,ind)=>{ele.innerText = oldPrices[ind]})
+}
